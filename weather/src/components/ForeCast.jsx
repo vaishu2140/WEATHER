@@ -27,7 +27,8 @@ const hourlyForecast=[
                 <div key={index} className='flex justify-between items-center flex-row p-2'>
                     <p>{cast.icon}</p>
                     <p className='Font-bold items-center'>{cast.temperature}</p>
-                    <p className='font-bold'>{cast.day},{cast.date}</p>
+                    <p className='font-bold'>{cast.da
+                    </p>
                 </div>
             ))}
 
