@@ -36,13 +36,11 @@ const App = () => {
       
       <Nav onCitySearch={handleCitSearch} onLocationFetch={handleLocationFetch}/>
 
-      
-      </div> 
-      
-      
+        </div>
+      <div>
       <Citytime cityName={cityName} lat={lat} lon={lon} setLat={setLat} setLon={setLon}/>
         
-      
+      </div>
     </div>
   )
 }
