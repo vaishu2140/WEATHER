@@ -8,7 +8,7 @@ const Nav = () => {
     <div className="m-4">
         <div className="flex flex-col items-center justify-between gap-4 lg:flex-row">
             {/* Logo Section */}
-            <img src={logo} alt='logo' className='w-48 select-none '/>
+            <img src={logo} alt='logo' className='w-15 select-none '/>
             {/* search bar*/}
             <form className='relative flex items-center w-full max-w-md bg-white rounded-lg shadow-md '>
                 <img src={search1} alt='search' className='absolute left-3 w-4 h-4 text-gray-400 select-none'/>
