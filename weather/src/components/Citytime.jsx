@@ -68,21 +68,33 @@ const Citytime = ({cityName, lat, lon, setLat, setLon}) => {
 
   useEffect(() => {
     if (!cityName && lat === null && lon === null) {
-      fetchData("Pune")
+      {/* Pass weather to your UI components */}
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+          (position) => {
+            setLat(position.coords.latitude)
+            setLon(position.coords.longitude)
+          },
+          (error) => {
+            console.error("Geolocation error:", error)
+          }
+        )
+      }
     }
   }, [])
 
   // 🔁 CITY SEARCH
   useEffect(() => {
-    if (cityName?.trim()) {
-      fetchData(cityName)
+    if (cityName) {
+      fetchData(cityName, null, null) 
     }
   }, [cityName])
 
   // 📍 LOCATION FETCH
   useEffect(() => {
+    
     if (lat !== null && lon !== null) {
-      fetchData(null, lat, lon)
+      fetchData(null, lat, lon) 
     }
   }, [lat, lon])
 
